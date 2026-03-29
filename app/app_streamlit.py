@@ -8,7 +8,7 @@ MODEL_PATH = Path(__file__).parent / "artifacts" / "model.pkl"
 st.set_page_config(page_title="Spaceship Titanic")
 st.title("Spaceship Titanic — Prediksi Transportasi")
 
-@st.cache_resource
+st.cache_resource
 def load_model():
     return joblib.load(MODEL_PATH)
 
